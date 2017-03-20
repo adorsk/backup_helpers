@@ -20,6 +20,7 @@ config['DEFAULT_PARAMS'] = {
 config['BACKUP_SPECS'] = {
     'postgres': {
         'module': 'backup_modules.postgres',
+        'label': 'postgres',
         'params': {
             **config['DEFAULT_PARAMS'],
             'BACKUP_ROOT': os.path.join(config['BACKUP_ROOT'], 'postgres'),
@@ -28,6 +29,7 @@ config['BACKUP_SPECS'] = {
     },
     'rsync': {
         'module': 'backup_modules.rsync',
+        'label': 'rsync',
         'params': {
             **config['DEFAULT_PARAMS'],
             'BACKUP_ROOT': os.path.join(config['BACKUP_ROOT'], 'rsync'),
